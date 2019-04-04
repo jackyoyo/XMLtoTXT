@@ -16,15 +16,14 @@ public class readXMLClass {
 
 	public ArrayList<Map<String, String>> Reader(File file) {
 
-		
 		ArrayList<Map<String, String>> recordmapList = new ArrayList<Map<String, String>>();
 
 		SAXBuilder builder = new SAXBuilder();
 		try {
 			Document doc = builder.build(file);
 
-			Element root = doc.getRootElement();
-			List<Element> empRecords = root.getChildren("EMPLOYEE-RECORD");
+			Element rootElement = doc.getRootElement();
+			List<Element> empRecords = rootElement.getChildren("EMPLOYEE-RECORD");
 			for (int i = 0; i < empRecords.size(); i++) {
 
 				Element currentRecord = empRecords.get(i);
