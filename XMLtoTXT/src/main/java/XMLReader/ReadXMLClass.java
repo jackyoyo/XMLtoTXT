@@ -12,9 +12,13 @@ import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
 
-public class readXMLClass {
+/**
+ * @author 82296AD1601
+ *
+ */
+public class ReadXMLClass {
 
-	public ArrayList<Map<String, String>> Reader(File file) {
+	public ArrayList<Map<String, String>> reader(File file) {
 
 		ArrayList<Map<String, String>> recordmapList = new ArrayList<Map<String, String>>();
 

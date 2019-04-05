@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import TextFileWriter.WriteText;
-import XMLReader.readXMLClass;
+import XMLReader.ReadXMLClass;
 
 public class ExecutorClass {
 		
@@ -15,8 +15,8 @@ public class ExecutorClass {
 		File srcFile = new File(".\\Input\\Employee.xml");
 		File destFile = new File(".\\Output\\Employee.txt");
 		
-		readXMLClass readXMLClass = new readXMLClass();
-		ArrayList<Map<String, String>> empRecordList = readXMLClass.Reader(srcFile);
+		ReadXMLClass readXMLClass = new ReadXMLClass();
+		ArrayList<Map<String, String>> empRecordList = readXMLClass.reader(srcFile);
 		
 		WriteText writeText = new WriteText();
 		writeText.writetoTXT(destFile, empRecordList);
